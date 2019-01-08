@@ -31,7 +31,7 @@ class UIPageViewController: UIViewController {
             let menuLeftNavigationController = UISideMenuNavigationController(rootViewController: (self.storyboard?.instantiateViewController(withIdentifier: LeftMenuViewController.className))!)
             SideMenuManager.default.menuLeftNavigationController = menuLeftNavigationController
             SideMenuManager.defaultManager.menuPresentMode = .menuSlideIn
-            SideMenuManager.defaultManager.menuWidth = self.view.frame.width - 100
+            SideMenuManager.defaultManager.menuWidth = self.view.frame.width - 99
             SideMenuManager.defaultManager.menuEnableSwipeGestures = true
             SideMenuManager.defaultManager.menuFadeStatusBar = false
             if(self.navigationController != nil) {
