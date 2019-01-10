@@ -184,34 +184,47 @@
                                 </connections>
                             </button>
                             <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NF8-YR-d39">
-                                <rect key="frame" x="32" y="79" width="311" height="518"/>
+                                <rect key="frame" x="32" y="79" width="311" height="400"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wZt-7e-yhd">
+                                <rect key="frame" x="32" y="489" width="311" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="bKA-xd-38G"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="5rZ-SO-E3u" firstAttribute="leading" secondItem="4vQ-r0-uZl" secondAttribute="leading" constant="70" id="948-ht-cS1"/>
+                            <constraint firstItem="X47-px-4Un" firstAttribute="top" secondItem="wZt-7e-yhd" secondAttribute="bottom" constant="10" id="98K-M9-UZm"/>
                             <constraint firstItem="5rZ-SO-E3u" firstAttribute="centerX" secondItem="dyJ-ey-Jy1" secondAttribute="centerX" id="N6d-CJ-GJm"/>
                             <constraint firstItem="NF8-YR-d39" firstAttribute="leading" secondItem="dyJ-ey-Jy1" secondAttribute="leading" constant="32" id="VqE-WR-bBX"/>
                             <constraint firstItem="5rZ-SO-E3u" firstAttribute="top" secondItem="dyJ-ey-Jy1" secondAttribute="top" constant="20" id="aoP-eP-V35"/>
                             <constraint firstItem="dyJ-ey-Jy1" firstAttribute="bottom" secondItem="X47-px-4Un" secondAttribute="bottom" constant="20" id="bew-c8-u4u"/>
+                            <constraint firstItem="wZt-7e-yhd" firstAttribute="leading" secondItem="dyJ-ey-Jy1" secondAttribute="leading" constant="32" id="bv0-8T-E5x"/>
                             <constraint firstItem="NF8-YR-d39" firstAttribute="top" secondItem="dyJ-ey-Jy1" secondAttribute="top" constant="15" id="dCu-Pp-7B5"/>
                             <constraint firstItem="dyJ-ey-Jy1" firstAttribute="trailing" secondItem="X47-px-4Un" secondAttribute="trailing" constant="32" id="deb-b0-wed"/>
+                            <constraint firstItem="wZt-7e-yhd" firstAttribute="top" secondItem="NF8-YR-d39" secondAttribute="bottom" constant="10" id="gvH-NX-bfA"/>
                             <constraint firstAttribute="trailing" secondItem="5rZ-SO-E3u" secondAttribute="trailing" constant="70" id="jV8-qS-ZLU"/>
+                            <constraint firstItem="dyJ-ey-Jy1" firstAttribute="trailing" secondItem="wZt-7e-yhd" secondAttribute="trailing" constant="32" id="nyj-WW-7md"/>
                             <constraint firstItem="X47-px-4Un" firstAttribute="leading" secondItem="dyJ-ey-Jy1" secondAttribute="leading" constant="32" id="w5x-AC-c5M"/>
-                            <constraint firstItem="X47-px-4Un" firstAttribute="top" secondItem="NF8-YR-d39" secondAttribute="bottom" constant="2" id="xLe-dA-2n5"/>
                             <constraint firstItem="dyJ-ey-Jy1" firstAttribute="trailing" secondItem="NF8-YR-d39" secondAttribute="trailing" constant="32" id="y0A-Hk-a3g"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dyJ-ey-Jy1"/>
                     </view>
                     <navigationItem key="navigationItem" title="Фото" id="b6d-tN-KFo"/>
                     <connections>
+                        <outlet property="accelerometerLabel" destination="wZt-7e-yhd" id="LDn-oj-XDb"/>
                         <outlet property="imageView" destination="NF8-YR-d39" id="B8o-ek-HRR"/>
                         <outlet property="mainBtn" destination="X47-px-4Un" id="yVe-jJ-r3w"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3co-13-h6h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3854" y="125"/>
+            <point key="canvasLocation" x="3853.5999999999999" y="124.58770614692655"/>
         </scene>
         <!--Карта-->
         <scene sceneID="32o-wE-1Kj">

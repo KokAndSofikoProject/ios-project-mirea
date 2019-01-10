@@ -1,16 +1,35 @@
 import UIKit
 import MapKit
+import CoreMotion
 
 class CreatePhotoViewController: UIPageViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var mainBtn: UIButton!
     let locManager = CLLocationManager()
+    var motion = CMMotionManager()
+    @IBOutlet weak var accelerometerLabel: UILabel!
     
     override func loadViewController() {
         createMenuButton()
         locManager.requestAlwaysAuthorization()
         locManager.startUpdatingLocation()
+        startAccelerometer()
+    }
+    
+    func startAccelerometer() {
+        guard motion.isAccelerometerAvailable else {
+            return
+        }
+        motion.startAccelerometerUpdates(to: .main) { (data, error) in
+            guard let data = data, error == nil else {
+                return
+            }
+            self.accelerometerLabel.text = "Ускорение по осям:\n" +
+            "X: " + String(data.acceleration.x) + "\n" +
+            "Y: " + String(data.acceleration.y) + "\n" +
+            "Z: " + String(data.acceleration.z)
+        }
     }
 
     @IBAction func mainBtnClick(_ sender: Any) {
